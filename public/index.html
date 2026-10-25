@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section id="lobby">
+    <h1>Guessing Game</h1>
+    <input id="name" placeholder="Your name" maxlength="20" />
+    <button id="create-btn">Create a game</button>
+    <div class="row">
+      <input id="code" placeholder="Session code" maxlength="6" />
+      <button id="join-btn">Join</button>
+    </div>
+    <p id="lobby-error" class="error"></p>
+  </section>
+
+  <section id="game" hidden>
+    <header>
+      <div>Session <strong id="session-code"></strong></div>
+      <div id="player-count"></div>
+      <div id="timer"></div>
+      <button id="leave-btn">Leave</button>
+    </header>
+    <main>
+      <aside>
+        <h2>Scores</h2>
+        <ul id="players"></ul>
+      </aside>
+      <div class="chat">
+        <div id="question-banner" hidden></div>
+        <ul id="messages"></ul>
+        <p id="status-line"></p>
+        <form id="master-form" hidden>
+          <input id="q-input" placeholder="Question" maxlength="200" />
+          <input id="a-input" placeholder="Answer" maxlength="200" />
+          <button type="submit">Set question</button>
+          <button type="button" id="start-btn">Start game</button>
+        </form>
+        <form id="guess-form" hidden>
+          <input id="guess-input" placeholder="Type your guess…" maxlength="200" autocomplete="off" />
+          <button type="submit">Guess</button>
+        </form>
+      </div>
+    </main>
+  </section>
+
+  <!-- Socket.IO serves its own client library at this path automatically -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

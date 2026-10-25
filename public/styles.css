@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f4f5f7; color: #1d2330; }
+
+#lobby { max-width: 360px; margin: 15vh auto; padding: 0 16px; display: flex; flex-direction: column; gap: 10px; }
+.row { display: flex; gap: 8px; }
+input { flex: 1; min-width: 0; padding: 10px; border: 1px solid #ccd; border-radius: 8px; font-size: 1rem; }
+button { padding: 10px 14px; border: 0; border-radius: 8px; background: #3355ff; color: #fff; font-size: 1rem; cursor: pointer; }
+.error { color: #c62828; }
+
+#game { height: 100vh; display: flex; flex-direction: column; }
+header { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; padding: 12px 16px; background: #fff; border-bottom: 1px solid #e3e5ea; }
+#leave-btn { margin-left: auto; background: #e5484d; }
+main { flex: 1; display: flex; min-height: 0; }
+aside { width: 220px; padding: 16px; background: #fff; border-right: 1px solid #e3e5ea; }
+aside ul { list-style: none; padding: 0; margin: 0; line-height: 1.8; }
+
+.chat { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 16px; min-height: 0; }
+#question-banner { padding: 12px; background: #fff7d6; border-radius: 8px; font-weight: 600; }
+#messages { flex: 1; overflow-y: auto; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.msg { max-width: 80%; padding: 8px 12px; border-radius: 12px; background: #fff; }
+.msg.system, .msg.error { align-self: center; background: transparent; font-size: 0.9rem; color: #667; }
+.msg.error { color: #c62828; }
+.msg.guess { align-self: flex-start; }
+.msg.win { align-self: center; background: #d6f5dd; font-weight: 600; }
+#status-line { margin: 0; color: #556; font-size: 0.9rem; }
+form { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 640px) {
+  main { flex-direction: column; }
+  aside { width: auto; border-right: 0; border-bottom: 1px solid #e3e5ea; }
+}
