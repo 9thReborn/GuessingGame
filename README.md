@@ -2,7 +2,7 @@
 
 A real-time multiplayer guessing game. One player (the game master) sets a question and answer, the others race to guess it, and everyone sees guesses, winners and scores live, in a chat-style interface.
 
-**Live demo:** _add your Render URL here_
+**Live demo:** https://guessinggame-1f5q.onrender.com/
 > Hosted on Render's free tier: the first load after a quiet period can take ~50 seconds while the server wakes up.
 
 ---
